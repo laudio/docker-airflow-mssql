@@ -7,27 +7,23 @@ Docker image with airflow and mssql tools including msodbc, sqlcmd and pyodbc.
 1. Clone this repository.
 
 ```bash
-# Clone the repository into your desired directory.
-$ git clone git@github.com:SafalPandey/docker-airflow-mssql.git
+$ git clone git@github.com:laudio/docker-airflow-mssql.git
 ```
 
-2. cd into the cloned repo directory.
+2. Go to the cloned directory.
 
 ```bash
-# cd into the directory.
 $ cd docker-airflow-mssql
 ```
 
-3. Build a docker image using this Dockerfile.
+3. Build a docker image.
 
 ```bash
-# Build an image with desired image name and tag.
 $ docker build -t <image_name>:<tag> .
 ```
 
 4. Run docker container.
 
 ```bash
-# Run docker container using the built image.
 $ docker run <image_name>
 ```
