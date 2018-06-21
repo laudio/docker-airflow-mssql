@@ -2,6 +2,8 @@
 
 Docker image with airflow and mssql tools including msodbc, sqlcmd and pyodbc.
 
+https://hub.docker.com/r/laudio/airflow-mssql
+
 ## Usage
 
 ```bash
