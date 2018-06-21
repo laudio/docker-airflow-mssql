@@ -1,8 +1,10 @@
-FROM puckel/docker-airflow:1.8.0
+FROM puckel/docker-airflow:1.9.0-4
 
 USER root
 
 RUN apt-get update && apt-get install -y \
+    --reinstall build-essential \
+    gnupg2 \
     curl apt-transport-https debconf-utils \
     && rm -rf /var/lib/apt/lists/*
 
