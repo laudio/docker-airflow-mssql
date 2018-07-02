@@ -30,8 +30,11 @@ RUN apt-get update && \
 
 USER airflow
 
+RUN pip install fabric3 --user
+
 RUN echo 'export PATH="$PATH:/opt/mssql-tools/bin"' >> ~/.bashrc && \
     echo 'export PATH="$PATH:/opt/mssql-tools/bin"' >> ~/.profile && \
-    echo 'export PATH="$PATH:/opt/mssql-tools/bin"' >> ~/.bash_profile
+    echo 'export PATH="$PATH:/opt/mssql-tools/bin"' >> ~/.bash_profile && \
+    echo 'export PATH="$PATH:/usr/local/airflow/.local/bin"' >> ~/.bashrc
 
 RUN /bin/bash -c "source ~/.bashrc"
