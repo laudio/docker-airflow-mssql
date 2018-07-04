@@ -30,7 +30,7 @@ RUN apt-get update && \
 
 USER airflow
 
-RUN pip install fabric3 --user
+RUN pip install fabric3 flask_bcrypt --user
 
 RUN echo 'export PATH="$PATH:/opt/mssql-tools/bin"' >> ~/.bashrc && \
     echo 'export PATH="$PATH:/opt/mssql-tools/bin"' >> ~/.profile && \
