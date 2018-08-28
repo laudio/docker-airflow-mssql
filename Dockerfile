@@ -13,7 +13,6 @@ RUN curl https://packages.microsoft.com/keys/microsoft.asc | apt-key add - && \
 # Install SQL Server drivers and client tools.
 
 ENV ACCEPT_EULA=Y
-ENV PATH="$PATH:/opt/mssql-tools/bin"
 
 RUN apt-get update && \
     apt-get upgrade -y libc6
@@ -34,6 +33,5 @@ USER airflow
 
 RUN pip install fabric3 flask_bcrypt slackclient boto3 --user
 
-RUN echo 'export PATH="$PATH:/usr/local/airflow/.local/bin"' >> ~/.bashrc
-
-RUN /bin/bash -c "source ~/.bashrc"
+ENV PATH="$PATH:/opt/mssql-tools/bin"
+ENV PATH="$PATH:/usr/local/airflow/.local/bin"
