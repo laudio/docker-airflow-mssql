@@ -30,6 +30,6 @@ RUN apt-get update && apt-get install -y \
 
 USER airflow
 
-RUN pip install fabric3 flask_bcrypt slackclient boto3 xlrd --user
+RUN pip install fabric3 flask_bcrypt slackclient boto3 xlrd hvac==0.6.4 --user
 
 ENV PATH="$PATH:/opt/mssql-tools/bin:/usr/local/airflow/.local/bin"
